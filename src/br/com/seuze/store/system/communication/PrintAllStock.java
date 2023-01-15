@@ -10,8 +10,8 @@ public class PrintAllStock {
 		ProductService ps = new ProductService();
 		LinkedHashMap<String, Object> stock = ps.listAllProducts(); 
 		System.out.println("------------ ESTOQUE -------------");
-		for(Object object : stock.keySet()) {
-			Product product = (Product) object;
+		for(String key : stock.keySet()) {
+			Product product = (Product) stock.get(key);
 			System.out.println(product.toString());
 			System.out.println("-----------------------");
 		};

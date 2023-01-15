@@ -5,7 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public enum ProductType {
-	SHIRT("SHI", "Shirt"), SHORTS("SCH", "Shorts"), PANTS("PAN", "Pants"),
+	SHIRT("SHI", "Shirt"), SHORTS("SCT", "Shorts"), PANTS("PAN", "Pants"),
 	SHOES("SHO", "Shoes"), HAT("HAT", "Hat"), SWIMMING_CAP("SCA", "Swimming Cap");
 	
     private final String value;

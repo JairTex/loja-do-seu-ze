@@ -1,9 +1,7 @@
 package br.com.seuze.store.system.service;
 
 import java.util.LinkedHashMap;
-
 import br.com.seuze.store.system.data.SaleData;
-import br.com.seuze.store.system.enumeration.TypeOfPayment;
 import br.com.seuze.store.system.model.Sale;
 import br.com.seuze.store.system.strategy.PaymentStrategy;
 
@@ -18,5 +16,6 @@ public interface SaleServiceInterface {
 	public boolean documentDigitsAccepted(String document);
 	public Double calculateTotalValue(String id);
 	public void cleanBag(String id);
+	public LinkedHashMap<String, Object> finishedSales();
 	public SaleData listSales(); 
 }

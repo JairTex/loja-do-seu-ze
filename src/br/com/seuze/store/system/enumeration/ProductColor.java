@@ -4,10 +4,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public enum ProductColor {
-	BLUE("BLU", "Blue"), LIGHT_BLUE("LBL", "Light blue"), DARK_BLUE("DBL", "Dark blue"),
-	GREEN("GRE", "Green"), YELLOW("YEL", "Yellow"), ORANGE("ORA", "Orange"), PINK("PIN", "Pink"),
-	RED("RED", "Red"), PURPLE("PUR", "Purple"), BROWN("BRO", "Brown"), GRAY("GR", "Gray"),
-	BLACK("BLA", "Black"), WHITE("WHI", "White"), OTHER("OTH", "Other");
+	BLUE("BLU", "Blue"), GREEN("GRE", "Green"), YELLOW("YEL", "Yellow"), 
+	RED("RED", "Red"), GRAY("GRA", "Gray"),	BLACK("BLA", "Black"), 
+	WHITE("WHI", "White"), OTHER("OTH", "Other");
 	
     private final String value;
     private final String description;

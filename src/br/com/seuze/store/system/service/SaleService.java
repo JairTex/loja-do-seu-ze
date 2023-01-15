@@ -2,12 +2,12 @@ package br.com.seuze.store.system.service;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.LinkedHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import br.com.seuze.store.system.data.ProductData;
 import br.com.seuze.store.system.data.SaleData;
-import br.com.seuze.store.system.enumeration.TypeOfPayment;
 import br.com.seuze.store.system.model.Product;
 import br.com.seuze.store.system.model.Sale;
 import br.com.seuze.store.system.strategy.PaymentStrategy;
@@ -155,6 +155,22 @@ public class SaleService implements SaleServiceInterface{
 		}
 		
 		return document.equalsIgnoreCase(cpdValid);
+	}
+	
+	public LinkedHashMap<String, Object> finishedSales(){
+		LinkedHashMap<String, Object> allSales = saleData.listAll();
+		LinkedHashMap<String, Object> finishedSales = new LinkedHashMap<>();
+		
+		Integer count = 1;
+		for(String key : allSales.keySet()) {
+			Sale sale = (Sale) allSales.get(key);
+			if(sale.isCompleted()) { 
+				finishedSales.put(count.toString(), sale);
+				count++;
+			}
+		}
+		
+		return finishedSales;
 	}
 	
 	public SaleData listSales() {
